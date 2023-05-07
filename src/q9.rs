@@ -22,19 +22,10 @@ mod tests {
         assert_eq!(answer, expected);
     }
 
-//    #[test]
-    fn leet_test_cases(){
-        verify(
-            Solution::is_palindrome(121),
-            true
-        );
-        verify(
-            Solution::is_palindrome(-121),
-            false
-        );
-        verify(
-            Solution::is_palindrome(10),
-            false
-        );
+    //    #[test]
+    fn leet_test_cases() {
+        verify(Solution::is_palindrome(121), true);
+        verify(Solution::is_palindrome(-121), false);
+        verify(Solution::is_palindrome(10), false);
     }
 }

@@ -6,9 +6,8 @@ impl Solution {
         let mut result = vec![];
         nums.sort();
 
-
         let mut i = 0;
-        while i < (nums.len() - 1){
+        while i < (nums.len() - 1) {
             let (mut j, mut k) = (i + 1, nums.len() - 1);
             while j < k {
                 let sum = nums[i] + nums[j] + nums[k];
@@ -45,7 +44,6 @@ mod tests {
     use std::collections::HashSet;
 
     fn verify(mut answer: Vec<Vec<i32>>, expected: HashSet<Vec<i32>>) {
-
         let mut seen = HashSet::new();
         for ans in answer.iter_mut() {
             assert!(!seen.contains(ans));
@@ -54,11 +52,20 @@ mod tests {
         }
     }
 
-//    #[test]
+    //    #[test]
     fn leet_test_cases() {
-        verify(Solution::three_sum(vec![-1, 0, 1, 2, -1, -4]), HashSet::from([vec![-1, -1, 2], vec![-1, 0, 1]]));
+        verify(
+            Solution::three_sum(vec![-1, 0, 1, 2, -1, -4]),
+            HashSet::from([vec![-1, -1, 2], vec![-1, 0, 1]]),
+        );
         verify(Solution::three_sum(vec![0, 1, 1]), HashSet::from([]));
-        verify(Solution::three_sum(vec![0, 0, 0]), HashSet::from([vec![0, 0, 0]]));
-        verify(Solution::three_sum(vec![-2, 0, 0, 2, 2]), HashSet::from([vec![-2, 0, 2]]));
+        verify(
+            Solution::three_sum(vec![0, 0, 0]),
+            HashSet::from([vec![0, 0, 0]]),
+        );
+        verify(
+            Solution::three_sum(vec![-2, 0, 0, 2, 2]),
+            HashSet::from([vec![-2, 0, 2]]),
+        );
     }
 }

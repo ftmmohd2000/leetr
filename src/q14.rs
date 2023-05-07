@@ -40,9 +40,23 @@ mod tests {
         assert_eq!(answer, expected);
     }
 
-//    #[test]
+    //    #[test]
     fn leet_test_cases() {
-        verify(Solution::longest_common_prefix(vec![String::from("flower"),String::from("flow"),String::from("flight")]), String::from("fl"));
-        verify(Solution::longest_common_prefix(vec![String::from("dog"),String::from("racecar"),String::from("car")]), String::from(""));
+        verify(
+            Solution::longest_common_prefix(vec![
+                String::from("flower"),
+                String::from("flow"),
+                String::from("flight"),
+            ]),
+            String::from("fl"),
+        );
+        verify(
+            Solution::longest_common_prefix(vec![
+                String::from("dog"),
+                String::from("racecar"),
+                String::from("car"),
+            ]),
+            String::from(""),
+        );
     }
 }
