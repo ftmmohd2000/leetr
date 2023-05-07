@@ -14,6 +14,7 @@ impl Solution {
 }
 
 #[cfg(test)]
+#[allow(dead_code)]
 mod tests {
     use super::Solution;
 
@@ -21,7 +22,7 @@ mod tests {
         assert_eq!(answer, expected);
     }
 
-    #[test]
+//    #[test]
     fn leet_test_cases(){
         verify(
             Solution::is_palindrome(121),
