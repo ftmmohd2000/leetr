@@ -14,10 +14,12 @@ impl Solution {
                 '{' | '(' | '[' => st.push(ch),
                 '}' | ')' | ']' => {
                     if (st.len() == 0) || (*ref_map.get(&ch).unwrap() != st.pop().unwrap()) {
-                        return false
+                        return false;
                     }
-                },
-                _ => {panic!("Unexpected Character")}
+                }
+                _ => {
+                    panic!("Unexpected Character")
+                }
             }
         }
 
@@ -34,7 +36,7 @@ mod tests {
         assert_eq!(answer, expected);
     }
 
-//    #[test]
+    //    #[test]
     fn leet_test_cases() {
         verify(Solution::is_valid("()".to_owned()), true);
         verify(Solution::is_valid("(){}[]".to_owned()), true);
